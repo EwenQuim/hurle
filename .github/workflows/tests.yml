@@ -37,10 +37,8 @@ jobs:
           sudo dpkg -i hurl_5.0.0_amd64.deb
           hurl --version
       - name: Integration test
-        run: make
+        run: make public # Only public tests
         continue-on-error: true
-        env: # Or as an environment variable
-          HURL_GOURMET_BASIC_AUTH: ${{ secrets.HURL_GOURMET_BASIC_AUTH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

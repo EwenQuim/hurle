@@ -4,9 +4,13 @@ ifneq (,$(wildcard ./.env))
     export
 endif
 
+HURL_COMMAND=hurl --report-json _report --report-html _site --compressed --test --retry 3
 
-run: clean
-	hurl --report-json report --report-html _site --compressed --test --retry 3 . 
+all: clean
+	$(HURL_COMMAND) .
+
+public: clean
+	$(HURL_COMMAND) public
 
 clean:
 	rm -rf report/store
