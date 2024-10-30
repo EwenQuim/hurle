@@ -1,5 +1,5 @@
 run: clean
-	hurl --report-json report --report-html web --compressed --test . 
+	hurl --report-json report --report-html _site --compressed --test . 
 
 clean:
 	rm -rf report/store
