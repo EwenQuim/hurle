@@ -3,4 +3,5 @@ run: clean
 
 clean:
 	rm -rf report/store
+	rm -rf _site/store
 
