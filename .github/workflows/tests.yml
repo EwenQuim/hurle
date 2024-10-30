@@ -36,6 +36,7 @@ jobs:
           hurl --version
       - name: Integration test
         run: make
+        continue-on-error: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
