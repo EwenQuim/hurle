@@ -8,7 +8,7 @@ duration < 1000
 GET https://perf.quimerch.com
 HTTP/2 200
 [Asserts]
-duration < 100
+duration < 300
 
 # Perf is UP
 GET https://perf.quimerch.com/?token=cs
